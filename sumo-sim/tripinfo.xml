@@ -1,0 +1,5 @@
+<tripinfos>
+    <tripinfo id="veh0" depart="0.00" duration="72.5" routeLength="1000.0" averageSpeed="13.8"/>
+    <tripinfo id="veh1" depart="10.00" duration="72.4" routeLength="1000.0" averageSpeed="13.8"/>
+    <tripinfo id="veh2" depart="20.00" duration="72.6" routeLength="1000.0" averageSpeed="13.8"/>
+</tripinfos>

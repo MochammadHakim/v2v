@@ -1,0 +1,22 @@
+import os
+import traci
+import socket
+import time
+import subprocess
+
+SUMO_BINARY = "sumo"  # atau 'sumo-gui' untuk mode GUI
+SUMO_CONFIG = "sumo_config.sumocfg"
+SUMO_PORT = 8813
+NS3_HOST = "127.0.0.1"
+NS3_PORT = 9999
+
+sumo_cmd = [SUMO_BINARY, "-c", SUMO_CONFIG, "--remote-port", str(SUMO_PORT), "--start"]
+sumo_process = subprocess.Popen(sumo_cmd)
+
+# Tunggu beberapa detik untuk memastikan TraCI siap
+time.sleep(1)
+
+# Connect to SUMO TraCI server
+traci.connect(port=SUMO_PORT)
+print("Connected to SUMO TraCI server")
+

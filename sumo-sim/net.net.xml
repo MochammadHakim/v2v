@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-05-02 08:46:18 by Eclipse SUMO netconvert Version v1_22_0+1845-6f46e1f4e58
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="net.nod.xml"/>
+        <edge-files value="net.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="net.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,1000.00,0.00" origBoundary="0.00,0.00,1000.00,0.00" projParameter="!"/>
+
+    <edge id=":B_0" function="internal">
+        <lane id=":B_0_0" index="0" speed="13.89" length="0.10" shape="500.00,-1.60 500.00,-1.60"/>
+    </edge>
+
+    <edge id="edge1" from="A" to="B" priority="-1">
+        <lane id="edge1_0" index="0" speed="13.89" length="500.00" shape="0.00,-1.60 500.00,-1.60"/>
+    </edge>
+    <edge id="edge2" from="B" to="C" priority="-1">
+        <lane id="edge2_0" index="0" speed="13.89" length="500.00" shape="500.00,-1.60 1000.00,-1.60"/>
+    </edge>
+
+    <junction id="A" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-3.20"/>
+    <junction id="B" type="priority" x="500.00" y="0.00" incLanes="edge1_0" intLanes=":B_0_0" shape="500.00,0.00 500.00,-3.20 500.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="C" type="dead_end" x="1000.00" y="0.00" incLanes="edge2_0" intLanes="" shape="1000.00,-3.20 1000.00,0.00"/>
+
+    <connection from="edge1" to="edge2" fromLane="0" toLane="0" via=":B_0_0" dir="s" state="M"/>
+
+    <connection from=":B_0" to="edge2" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

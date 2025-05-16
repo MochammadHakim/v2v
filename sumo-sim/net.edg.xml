@@ -1,0 +1,4 @@
+<edges>
+    <edge id="edge1" from="A" to="B"/>
+    <edge id="edge2" from="B" to="C"/>
+</edges>
